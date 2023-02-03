@@ -1,0 +1,72 @@
+html{
+  height: 100%;
+}
+body{
+  height:100%;
+  margin:0px;
+  background-color: #506571;
+  font-family: inter;
+  color:#F4F4F9;
+}
+#root{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height:100%;
+  background-color:#586F7C;
+  border:15px solid #506571;
+  border-radius: 50px;
+  box-sizing:border-box;
+}
+.app--title{
+  line-height: 0px;
+}
+.app--desc{
+  margin: 0px 500px;
+  text-align: center;
+}
+.scoreThingy{
+  position: absolute;
+  margin-top:-40px;
+  font-weight: bold;
+  text-align: center;
+}
+.app--tries{
+  margin-left:-70px;
+}
+.app--wins{
+  margin-left:205px;
+}
+.cards{
+  display:grid;
+  grid-template-columns: repeat(8,1fr);
+}
+.card{
+  height:222px;
+  width:160px;
+  margin:0px 10px;
+  user-select: none;
+}
+.iconShown{
+  padding-left:10px;
+  padding-top:40px;
+  width:180px;
+}
+.iconHidden{
+  width:180px;
+  height:242px;
+  border-radius: 10px;
+}
+.resetButton{
+  border: none;
+  border-radius: 5px;
+  padding:10px 0px;
+  font-weight: bolder;
+  font-family: inter;
+  width:150px;
+  background-color: #88A5AB;
+  color:white;
+  align-self: flex-end;
+  margin:auto;
+}
