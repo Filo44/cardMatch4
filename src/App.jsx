@@ -19,7 +19,7 @@ function App() {
   const [cards, setCards] = useState(genCardIds())
   const [selectedCard, setSelectedCard] = useState(null)
   const [selectedCard2, setSelectedCard2] = useState(null)
-  const [swapping,setSwapping]=useState(false)
+//   const [swapping,setSwapping]=useState(false)
   const [pairTries,setPairTries]= useState(0)
   const [wins,setWins]=useState(parseInt(localStorage.getItem("wins"))||0)
   const [won,setWon]=useState(false)
@@ -40,9 +40,9 @@ function App() {
   React.useEffect(()=>{
     localStorage.setItem("wins",wins)
   },[wins])
-  React.useEffect(()=>{
-    console.log("swapping")
-  },[swapping])
+//   React.useEffect(()=>{
+//     console.log("swapping")
+//   },[swapping])
 
   function genStartArray(amount) {
     let res = []
@@ -74,11 +74,11 @@ function App() {
     return [...src.slice(0, index), ...src.slice(index + 1)];
   }
   function handleTwoSelect(card1, card2) {
-    if (card1.iconNum === card2.iconNum && swapping==false) {
-      setSwapping(true)
+    if (card1.iconNum === card2.iconNum /*&& swapping==false*/) {
+//       setSwapping(true)
       setTimeout(() => {
         //*This will set the cards to not display after 1 sec
-        ()=>setSwapping(false)
+        ()=>/*setSwapping(false)*/
         setCards(prevCards => {
           return prevCards.map(card => {
             if (card.iconNum === card1.iconNum) {
@@ -121,7 +121,7 @@ function App() {
       select={() => setSelectedCard(card)}
       isThere={card.there}
       handleTwoSelect={(card2) => handleTwoSelect(card, card2)}
-      swapping={swapping}
+//       swapping={swapping}
     />)
   })
 
